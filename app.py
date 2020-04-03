@@ -49,7 +49,7 @@ def get_stores():
 @app.route('/store/<string:name>/item', methods=['POST'])
 def create_item_in_store(name):
     for store in stores:
-        if stores['name'] == name:
+        if store['name'] == name:
             request_data = request.get_json() # data sent to the endpoint from the browser
             # create new item
             new_item = {
